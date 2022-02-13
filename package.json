@@ -2,7 +2,8 @@
   "scripts": {
     "build": "yarn clean && babel ./src --out-dir dist",
     "start": "node ./dist/index.js",
-    "clean": "rm -rf ./dist && mkdir dist"
+    "clean": "rm -rf ./dist && mkdir dist",
+    "dev": "nodemon --exec babel-node ./src/index.js"
   },
   "dependencies": {
     "express": "^4.17.2"
@@ -10,6 +11,8 @@
   "devDependencies": {
     "@babel/cli": "^7.17.0",
     "@babel/core": "^7.17.2",
-    "@babel/preset-env": "^7.16.11"
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "nodemon": "^2.0.15"
   }
 }
