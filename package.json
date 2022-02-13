@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "build": "yarn clean && babel ./src --out-dir dist",
+    "start": "node ./dist/index.js",
+    "clean": "rm -rf ./dist && mkdir dist"
+  },
   "dependencies": {
     "express": "^4.17.2"
   },
