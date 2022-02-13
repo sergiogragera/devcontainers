@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  cache:
+    image: redis:6.2-alpine
+    restart: always
+    command: redis-server
+
+  server:
+    build: .
+    environment:
+      - PORT= 80
